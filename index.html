@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/component.css">
+    <title>Quản lý bài viết</title>
+</head>
+<body>
+    <div name="header" class="header">
+        <div id="hearder-content"> <h1>Quản lý bài viết thời sự</h1></div>
+        <div name='action' style="display: flex;">
+            <div class="filter">
+                <label for="cars">Choose a category:</label>
+
+                    <select name="category" id="category">
+                        <option value="">--Chọn trường giá trị--</option>
+                    </select>
+            </div>
+            <div class="add">
+                <button id='btnAdd'>Thêm Mới</button>
+            </div>
+        </div>
+    </div>
+    <div name="main-content">
+        <div class="list">
+            <table style="width:100%" id="myTabel">
+                <thead id='thead'>
+                    <tr>
+                        <th>id</th>
+                        <th>Bài Viết</th>
+                        <th>Chuyên Mục</th>
+                        <th>Thao tác</th>
+                    </tr>
+                </thead>
+                <tbody id='tbody'>
+                    
+                </tbody>
+                
+            </table>
+        </div>
+    </div>
+    <div name="footer"></div>
+
+   
+    <script src="js/list.js"></script>
+</body>
+</html>

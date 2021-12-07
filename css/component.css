@@ -1,0 +1,13 @@
+table, th, td {
+    border:1px solid black;
+  }
+.header{
+    text-align: center;
+    padding: 20px 0px;
+}
+.filter{
+    flex: 1;
+}
+.add{
+    flex:1;
+}
