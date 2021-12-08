@@ -1,14 +1,31 @@
-table, th, td {
-    border:1px solid black;
+table, 
+th, 
+td ,
+select{
+    border:1px solid #338EFF;
     text-align: center;
   }
+select{
+    text-align: left;
+}
 .header{
     text-align: center;
     padding: 20px 0px;
+    color: #338EFF;
 }
 .filter{
     flex: 1;
 }
 .add{
     flex:1;
+}
+button#btnAdd{
+    padding: 5px 10px;
+    border-radius: 8px;
+    background-color: #338EFF;
+    color: white;
+    border: none;
+    cursor: pointer;
+    min-width: 100px;
+
 }

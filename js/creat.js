@@ -1,9 +1,14 @@
 var listCategory= document.getElementById("category")
+let error = document.getElementById('error')
+let errorSelect = document.getElementById('errorSelect')
+let categorySelect = document.getElementById("category")
+let content = document.getElementById("content")
 var urlApiCategory="https://60d2bc7b858b410017b2e1fd.mockapi.io/category"
 var urlApiActilce="https://60d2bc7b858b410017b2e1fd.mockapi.io/article"
 function goInit(){
     getCategory(renderCategory);
     addForm();
+    validateForm();
     
 }
 
@@ -44,20 +49,39 @@ function createCategory(data){
 }
 
 function addForm(){
-    let categorySelect = document.getElementById("category")
     let btnCommit = document.getElementById("confirmBtn")
     let value =''
     categorySelect.onclick = function(){
         
         value = categorySelect.value
+
       }
     btnCommit.onclick = function(){
-        var content = document.getElementById("content").value
+        
         var data ={
             category: value,
-            content:content
+            content:content.value
         }
-        createCategory(data)
+
+        if(content.value == ''){
+            error.style.display = "block";
+
+        }
+
+        if(categorySelect.value=='none'){
+            errorSelect.style.display= "block";
+        }
+
+        if(content.value != "" && categorySelect.value!='none'){
+            createCategory(data)
+        }
+        
     }
   
+}
+
+function validateForm(){
+    content.onkeyup= function(){
+        error.style.display = "none";
+    }
 }
