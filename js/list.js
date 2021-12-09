@@ -14,6 +14,7 @@ function getCategory(callback){
     fetch(urlApiCategory)
         .then(function(response){
             return response.json();
+            
         })
         .then(callback);
 }
@@ -27,6 +28,7 @@ function getArticle(callback){
 }
 
 function renderCategory(category){
+    console.log(category);
     var htmls = category.map(function(category){
         let categoryOption = document.createElement('option')
         categoryOption.innerHTML = category.category
@@ -76,14 +78,20 @@ function renderArticle(article){
 
         let tdElementAction = document.createElement('td')
         let btnDelete = document.createElement('button')
-        btnDelete.innerHTML= 'Xóa'
+       
+        btnDelete.innerHTML= 'Xóa '
         btnDelete.value= article.id
+       
         btnDelete.onclick = function(){
             deleteCategory(article.id)
         }
         let btnEdit = document.createElement('button')
         btnEdit.innerHTML= 'Sửa'
         btnEdit.value= article.id
+        
+        btnEdit.onclick = function(){
+            editCategory(article.id)
+        }
         console.log(btnEdit.value);
         tdElementAction.appendChild(btnDelete)
         tdElementAction.appendChild(btnEdit)
@@ -97,6 +105,10 @@ function renderArticle(article){
         myTbody.appendChild(trElement)
     })
 
+}
+
+function editCategory(id){
+    window.location.href='edit.html?id='+id
 }
 
 function deleteCategory(id){

@@ -29,3 +29,12 @@ button#btnAdd{
     min-width: 100px;
 
 }
+button{
+    background-color: #338EFF;
+    color: white;
+    cursor: pointer;
+    border-radius: 8px;
+    border: none;
+    margin: 5px 5px;
+
+}

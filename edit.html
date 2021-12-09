@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thêm Mới</title>
+    <style>
+        header,
+        .main{
+            margin: auto;
+            width: 30%;
+            border: 1px solid #338EFF;
+           
+        }
+        
+        .main{
+            position: relative;
+            min-height: 200px;
+           
+        }
+        header{
+            text-align: center;
+            color: #338EFF;
+        }
+        #error,
+        #errorSelect{
+            color: red;
+            display: none;
+        }
+        form,
+        label,
+        input,
+        select{
+            margin: 10px 5px;
+            padding: 5px 5px;
+        }
+        input,
+        select{
+            min-width: 250px;
+            border: 1px solid #338EFF;
+        }
+        button{
+            position: absolute;
+            padding: 5px 10px;
+            border-radius: 8px;
+            background-color: #338EFF;
+            color: white;
+            border: none;
+            cursor: pointer;
+            bottom:5px;
+            right: 120px;
+            min-width: 100px;
+
+        }
+        #cancleBtn{
+            background-color: #FF3C33;
+            right: 15px;
+            min-width: 100px;
+        }
+    </style>
+</head>
+<body>
+    <header name="header">
+        <h1>Chỉnh sửa bài viết</h1>
+    </header>
+    <div class="main">
+        <form name='addForm'>
+            <label for="fname">Bài Viết</label><br>
+            <input type="text" id="content" name="fname" ><br>
+            <span name="error" id="error">Chưa nhập nội dung</span>
+            <label for="lname">Chuyên mục</label><br>
+            <select name="category" id="category">   
+            </select><br><br>
+            <span name="error" id="errorSelect">*</span>
+          
+            <button type="button" id="confirmBtn" value="default">Chỉnh sửa</button>
+            <button type="button" id="cancleBtn" onclick=" window.location.href='index.html'">Hủy</button>
+         
+        </form>
+    </div>
+    <footer name="footer"></footer>
+    <script src="js/edit.js"></script>
+</body>
+</html>
